@@ -8,7 +8,7 @@ The abbreviated version of the word should have the first letter, then the numbe
     
 */
 
-//best solution's
+//best solutions
 
 function abbreviate(string) {
   return string.replace(/\w{4,}/g, function(word) {
