@@ -26,9 +26,9 @@ function abbreviate(string) {
   result = []
   for(let i = 0; i < arr.length; i++) {
     if(arr[i].length > 3 && arr[i].includes("-")) {
-      result.push(arr[i].split("-").map(y => String(y[0] + y.slice(1,y.length-1).length + y[y.length-1])).join("-"))
+      result.push(arr[i].split("-").map(y => String(y[0] + (y.length - 2) + y[y.length-1])).join("-"))
     } else if(arr[i].includes(",")) {
-       result.push(arr[i].split(",").splice(0,1).map(z => String(z[0] + z.slice(1,z.length-1).length + z[z.length - 1]).concat(",")))     
+       result.push(arr[i].split(",").splice(0,1).map(z => String(z[0] + (z.length - 2) + z[z.length - 1]).concat(",")))     
     } else if(arr[i].length > 3){
       result.push(arr[i][0] + (arr[i].length - 2) + arr[i].charAt(arr[i].length - 1))
       }  else {
@@ -36,7 +36,6 @@ function abbreviate(string) {
      }
   }
   return result.join(' ');
-}
 
 console.log(abbreviate("internationalization"))
 console.log(abbreviate("accessibility"))
