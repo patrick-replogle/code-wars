@@ -20,9 +20,9 @@ function pyramid(n) {
   return result;
 }
 
-//best solutions 
+//some best use solutions 
 
-//#1 and very close to mine
+//#1 
 function pyramid(n) {
   const res = [];
   for(let i = 0; i < n; i++){
