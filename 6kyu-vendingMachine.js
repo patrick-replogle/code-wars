@@ -5,7 +5,7 @@ class VendingMachine {
   } 
   
   vend(selection, itemMoney) {
-    // first search selection this.items
+    // first search for selection in this.items
     let found = this.items.filter((val, index) => selection === val.code)
     
     // if not found return invalid selection
